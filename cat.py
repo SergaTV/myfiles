@@ -20,10 +20,9 @@ class ertertertMod(loader.Module):
 	
 	@loader.sudo
 	async def catcmd(self, message):
-		url = "http://sergatv.ml/api/cat/"
-		r = requests.get(url, allow_redirects=True)
-		catName = 'cat.png'
-		open(catName, 'wb').write(r.content)
-		await message.reply(file=catName)
-		os.remove(catName)
-	
+		url = "https://sergatv.ml/api/cat"
+		r = requests.get(requests.get(url).json()[0]['url']).content
+		dogName = 'dog.png'
+		open(dogName, 'wb').write(r)
+		await message.reply(file=dogName)
+		os.remove(dogName)
