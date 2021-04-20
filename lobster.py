@@ -32,7 +32,11 @@ class abobaMod(loader.Module):
     proportion = textH / textW
     font = ImageFont.truetype(io.BytesIO(font_bytes), min(round(height * 0.2), round(width * 0.64 * proportion)))
     textW, textH = drawing.textsize(phrase, font)
+    x = round((width - textW) / 2)
+    y = round((height - textH) * 0.9)
     start_pos = (round((width - textW) / 2), round((height - textH) * 0.9))
+    drawing.text((x+1, y), phrase, font=font, fill=shadowcolor)
+    drawing.text((x, y-2), phrase, font=font, fill=shadowcolor)
     drawing.text(start_pos, phrase, font=font, fill=font_color)
     temptosend = io.BytesIO()
     img.save(temptosend, 'PNG')
