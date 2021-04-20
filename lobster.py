@@ -30,6 +30,7 @@ class abobaMod(loader.Module):
     font_color = (242, 242, 242)
     textW, textH = drawing.textsize(phrase, font)
     proportion = textH / textW
+    shadowcolor = "black"
     font = ImageFont.truetype(io.BytesIO(font_bytes), min(round(height * 0.2), round(width * 0.64 * proportion)))
     textW, textH = drawing.textsize(phrase, font)
     x = round((width - textW) / 2)
