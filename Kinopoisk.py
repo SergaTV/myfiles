@@ -51,7 +51,7 @@ class AliasesMod(loader.Module):
 		except:
 			await message.edit("Неправильный id!")
 			return
-		answer = getlink(id=args)
+		answer = getlink(message, id=args)
 		await message.edit(answer, parse_mode="HTML")
 	async def kinosearcmd(self, message):
 		"""Ищет фильм по аргументу в гугле и если нашел то возвращает ссылку. Использование пример: .kinosear босс молокосос"""
