@@ -29,7 +29,7 @@ def getlink(message, query=None, id=None):
 		else:
 			return "Не найдено! Попробуйте вставить сразу айди!"
 
-class AliasesMod(loader.Module):
+class kinopososososMod(loader.Module):
 	"""Ссылка на просмотр фильма из кинопоиска"""
 
 	strings = {'name': 'Kinopoisk-Watcher'}
