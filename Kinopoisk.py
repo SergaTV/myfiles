@@ -20,12 +20,12 @@ def getkinopoiskid(message, query):
 		#print(
 def getlink(message, query=None, id=None):
 	if query == None:
-		return f"Ваша ссылка на фильм, приятного просмотра: http://sergatv.github.io/Kinopoisk-Watch/?id={int(id)}"
+		return f"Ваша ссылка на фильм, приятного просмотра: http://sergatv.github.io/Kinopoisk-Watch/?id={int(id)}\nhttps://ww1.flink.su/film/{result}/ (если верхняя не работает)\n"
 	elif id == None:
 		result = getkinopoiskid(message, query)
 		
 		if result != None:
-			return f"Ваша ссылка на фильм, приятного просмотра: http://sergatv.github.io/Kinopoisk-Watch/?id={int(result)}\nЕсли это не то, что вы искали, попробуйте указать год выпуска фильма."
+			return f"Ваша ссылка на фильм, приятного просмотра: http://sergatv.github.io/Kinopoisk-Watch/?id={int(result)}\nhttps://ww1.flink.su/film/{result}/ (если верхняя не работает)\nЕсли это не то, что вы искали, попробуйте указать год выпуска фильма."
 		else:
 			return "Не найдено! Попробуйте вставить сразу айди!"
 
